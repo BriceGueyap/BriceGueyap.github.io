@@ -9,4 +9,8 @@
   transform: scale(1.2); /* Zoom in by 20% */
 }
 
+.custom-font {
+  font-size: 18px;
+}
+
 p { margin:0 }
