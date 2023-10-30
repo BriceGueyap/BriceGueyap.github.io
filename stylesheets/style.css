@@ -1,5 +1,9 @@
 /* Define the initial style for the link */
 .zoom-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077b6;
+  color: #ffffff;
   text-decoration: none; /* Remove the underline */
   transition: transform 0.3s; /* Add a smooth transition effect */
 }
