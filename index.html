@@ -33,6 +33,106 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 		  gtag('config', 'G-15D7S2HCNJ');
 		</script>
+		<style>
+			:root {
+				--jm-ink: #222;
+				--jm-text: #555;
+				--jm-muted: #8a8a8a;
+				--jm-line: #e5e5e5;
+				--jm-blue: #3399cc;      /* the site's link colour */
+				--jm-blue-soft: #f3f8fb;
+				--jm-warm: #c9741a;      /* the hidden trait */
+				--jm-warm-soft: #fff6ea;
+			}
+			section { color: var(--jm-text); }
+			section h2 { font-size: 24px; color: var(--jm-ink); margin: 0 0 14px; }
+			section h3 { font-size: 17px; color: var(--jm-ink); margin: 0 0 6px; }
+			section p  { margin: 0 0 16px; }
+			section a  { font-weight: 400; }
+
+			.jm-badge {
+				display: inline-block; margin: 0 0 14px; padding: 4px 11px;
+				border: 1px solid var(--jm-blue); border-radius: 999px;
+				color: var(--jm-blue); font-size: 12px; font-weight: 700;
+				letter-spacing: .06em; text-transform: uppercase;
+			}
+			.jm-lead { font-size: 17px; line-height: 1.5; color: #444; }
+			.jm-lead strong { color: var(--jm-ink); }
+
+			/* At a glance */
+			.jm-facts {
+				display: grid; grid-template-columns: 120px 1fr; gap: 6px 16px;
+				margin: 0 0 28px; padding: 16px 18px;
+				background: #fafafa; border: 1px solid var(--jm-line); border-radius: 6px;
+			}
+			.jm-facts dt { color: var(--jm-ink); font-weight: 700; margin: 0; }
+			.jm-facts dd { margin: 0; }
+
+			/* Job market paper card */
+			.jm-card {
+				border: 1px solid var(--jm-line); border-left: 4px solid var(--jm-blue);
+				border-radius: 6px; padding: 22px 24px 18px; margin: 0 0 30px;
+				background: #fff;
+			}
+			.jm-kicker {
+				font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+				color: var(--jm-muted); margin: 0 0 8px;
+			}
+			.jm-card h3 { font-size: 20px; line-height: 1.25; margin: 0 0 8px; }
+			.jm-card .jm-summary { font-style: italic; color: #666; margin-bottom: 18px; }
+			.jm-figure { margin: 0 0 6px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+			.jm-figure svg { display: block; width: 100%; min-width: 540px; height: auto; }  /* scrolls sideways on phones instead of shrinking */
+			.jm-figure figcaption { font-size: 13px; line-height: 1.45; color: var(--jm-muted); margin: 8px 4px 0; }
+			.jm-swipe { display: none; }
+			.jm-steps { list-style: none; padding: 0; margin: 18px 0 16px; border-top: 1px solid var(--jm-line); }
+			.jm-steps li {
+				display: grid; grid-template-columns: 92px 1fr; gap: 12px;
+				padding: 10px 0; border-bottom: 1px solid var(--jm-line);
+			}
+			.jm-steps b { color: var(--jm-ink); font-weight: 700; }
+			.jm-links { margin: 0; }
+			.jm-links a {
+				display: inline-block; margin: 0 8px 8px 0; padding: 6px 12px;
+				border: 1px solid var(--jm-blue); border-radius: 4px; font-size: 13px;
+			}
+			.jm-links a:hover { background: var(--jm-blue-soft); }
+
+			/* Other papers */
+			.jm-papers { list-style: none; padding: 0; margin: 0 0 8px; }
+			.jm-papers li { padding: 8px 0; border-bottom: 1px solid var(--jm-line); }
+			.jm-papers li:last-child { border-bottom: 0; }
+			.jm-papers .jm-title { color: var(--jm-ink); font-weight: 700; }
+			.jm-papers .jm-meta { display: block; font-size: 13px; color: var(--jm-muted); }
+			.jm-status {
+				display: inline-block; padding: 1px 7px; border-radius: 999px;
+				background: #f1f1f1; color: #666; font-size: 11px; font-weight: 700; letter-spacing: .04em;
+			}
+			.jm-more { margin: 10px 0 30px; }
+
+			/* References */
+			.jm-refs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0 0 24px; font-size: 14px; }
+			.jm-refs div { line-height: 1.4; }
+			.jm-refs b { color: var(--jm-ink); font-weight: 700; }
+			.jm-foot { font-size: 12px; color: var(--jm-muted); }
+
+			/* Sidebar additions */
+			header .jm-side-badge {
+				display: inline-block; margin: -10px 0 18px; padding: 3px 9px;
+				border-radius: 999px; background: var(--jm-blue-soft); color: var(--jm-blue);
+				font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+			}
+			header .jm-cvlang { font-size: 12px; font-weight: 400; color: var(--jm-muted); }
+			header .jm-cvlang a { font-size: 12px; }
+
+			@media (max-width: 600px) { .jm-swipe { display: block; font-style: italic; margin-bottom: 4px; } }
+			@media (max-width: 520px) {
+				.jm-facts { grid-template-columns: 1fr; gap: 2px 0; }
+				.jm-facts dd { margin-bottom: 8px; }
+				.jm-steps li { grid-template-columns: 1fr; gap: 2px; }
+				.jm-refs { grid-template-columns: 1fr; }
+			}
+		</style>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65546321-1"></script>
     <script>
@@ -65,7 +165,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h3><p class="zoom-link" class="view"><a href="https://bricegueyap.github.io/">Home</a></p></h3>
         <h3><p class="zoom-link" class="view"><a href="https://bricegueyap.github.io/research.html">Research</a></p></h3>
 				<h3><p class="zoom-link" class="view"><a href="https://bricegueyap.github.io/teaching.html">Teaching</a></p></h3>
-				<h3><p class="zoom-link" class="view"><a href="https://bricegueyap.github.io/cv.pdf" target="_blank">CV</a></p></h3>
+				<h3><p class="zoom-link" class="view"><a href="https://bricegueyap.github.io/CV/cv_EN.pdf" target="_blank">CV</a></p></h3>
 				<p class="view"><img src="brice.png" width=260 height=260></p>
 				<p> <strong><u> Contact Information:</u></strong><br>Department of Economics <br> London, Ontario, N6A 5C2,
 					Canada.<br> <strong>Email:</strong> bgueyapk(at)uwo(dot)ca <br> <strong>Office:</strong> SSC Building 4046 <br>
@@ -77,10 +177,115 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <section>
 	      <marquee>	<h3> Welcome to my home page!	</h3>  </marquee>
 				I am a Ph.D. Candidate (ABD) in the <a href="https://economics.uwo.ca"> Department of Economics</a> at
-				<a href="https://uwo.ca">Western University</a>. My primary research interest is
-				econometrics theory and applied.
-	      <a href="https://bricegueyap.github.io/cv.pdf" target="_blank">My CV is available here.</a>
-      </section>
+				<a href="https://uwo.ca">Western University</a>. My research is in <strong>econometric theory</strong>,
+				with applications to network and panel data.
+				I work on identification and estimation in semiparametric models where unobserved heterogeneity
+				drives both outcomes and the formation of links between agents. I also do applied work on
+				institutions, trust and political representation in Africa.
+				<br><br>
+				<p>
+					<strong>I am on the job market for the 2026-2027 academic year.</strong>
+				</p>
+
+			<dl class="jm-facts">
+				<dt>Fields</dt>
+				<dd>Econometrics (theory and applied), social networks; development economics, political economy</dd>
+				<dt>Curriculum vitae</dt>
+				<dd><a href="CV/cv_EN.pdf" target="_blank">English (PDF)</a> &middot; <a href="CV/cv_FR.pdf" target="_blank">Français (PDF)</a></dd>
+				<dt>Research</dt>
+				<dd><a href="research.html">All papers and works in progress</a></dd>
+			</dl>
+
+
+			<!-- ===================== Job market paper ===================== -->
+			<div class="jm-card">
+				<p class="jm-kicker">Job market paper</p>
+				<h3>Semiparametric Dynamic Logit Model with Endogenous Networks</h3>
+				<p class="jm-summary">
+					Identification and estimation of a dynamic binary-choice model when a latent trait drives both the
+					outcome and the formation of social ties, applied to adolescent smoking and friendship networks.
+				</p>
+
+				<figure class="jm-figure">
+					<svg viewBox="0 0 660 340" role="img" font-family="Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+							 aria-label="A hidden characteristic w drives both smoking and friendships; pocket money and past smoking also drive smoking; the dashed friendship-to-smoking arrow is what looks like peer influence.">
+						<defs>
+							<marker id="jm-ar-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+								<path d="M0,0 L10,5 L0,10 z" fill="#3399cc"/>
+							</marker>
+							<marker id="jm-ar-warm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+								<path d="M0,0 L10,5 L0,10 z" fill="#c9741a"/>
+							</marker>
+							<marker id="jm-ar-soft" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+								<path d="M0,0 L10,5 L0,10 z" fill="#9a9a9a"/>
+							</marker>
+						</defs>
+
+						<!-- Observed boxes -->
+						<g stroke="#bcd3e4" stroke-width="1.5" fill="#f3f8fb">
+							<rect x="75"  y="37"  width="170" height="46" rx="7"/>   <!-- pocket money -->
+							<rect x="325" y="127" width="150" height="46" rx="7"/>   <!-- smoking -->
+							<rect x="325" y="277" width="150" height="46" rx="7"/>   <!-- friendships -->
+							<rect x="510" y="122" width="130" height="56" rx="7"/>   <!-- past smoking -->
+						</g>
+						<!-- Hidden box -->
+						<rect x="55" y="172" width="210" height="86" rx="7" fill="#fff6ea" stroke="#c9741a" stroke-width="1.8" stroke-dasharray="6 4"/>
+
+						<!-- Box labels -->
+						<g font-size="14" fill="#222" text-anchor="middle">
+							<text x="160" y="64.5"><tspan font-weight="700">Pocket money</tspan><tspan font-style="italic" dx="6">X</tspan><tspan font-size="10" dy="3.5">it</tspan></text>
+							<text x="400" y="154.5"><tspan font-weight="700">Smoking</tspan><tspan font-style="italic" dx="6">y</tspan><tspan font-size="10" dy="3.5">it</tspan></text>
+							<text x="400" y="304.5"><tspan font-weight="700">Friendships</tspan><tspan font-style="italic" dx="6">D</tspan><tspan font-size="10" dy="3.5">t</tspan></text>
+							<text x="575" y="145"><tspan font-weight="700">Past smoking</tspan></text>
+							<text x="575" y="164"><tspan font-style="italic">y</tspan><tspan font-size="10" dy="3.5">i,t−1</tspan></text>
+							<text x="160" y="195"><tspan font-weight="700">Unobserved characteristics</tspan></text>
+							<text x="160" y="214"><tspan font-style="italic">w</tspan><tspan font-size="10" dy="3.5">it</tspan></text>
+							<text x="160" y="233" font-size="11.5" fill="#a05a12">risk attitude, impulsivity,</text>
+							<text x="160" y="247" font-size="11.5" fill="#a05a12">attachment to norms</text>
+						</g>
+
+						<!-- Effects of the hidden trait (warm) -->
+						<g stroke="#c9741a" stroke-width="1.8" fill="none">
+							<line x1="265" y1="198" x2="323" y2="158" marker-end="url(#jm-ar-warm)"/>
+							<line x1="265" y1="234" x2="323" y2="292" marker-end="url(#jm-ar-warm)"/>
+							<!-- w correlated with X -->
+							<line x1="160" y1="170" x2="160" y2="85" stroke-dasharray="5 4" marker-start="url(#jm-ar-warm)" marker-end="url(#jm-ar-warm)"/>
+							<!-- w moves over time -->
+							<path d="M 55 240 C 2 252, 2 178, 53 192" stroke-dasharray="5 4" marker-end="url(#jm-ar-warm)"/>
+						</g>
+						<!-- Observed causes (blue) -->
+						<g stroke="#3399cc" stroke-width="1.8" fill="none">
+							<line x1="245" y1="66" x2="333" y2="125" marker-end="url(#jm-ar-blue)"/>
+							<line x1="508" y1="150" x2="477" y2="150" marker-end="url(#jm-ar-blue)"/>
+						</g>
+						<!-- Spurious peer effect (grey, dashed) -->
+						<line x1="400" y1="275" x2="400" y2="176" stroke="#9a9a9a" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#jm-ar-soft)"/>
+
+						<!-- Arrow labels -->
+						<g font-size="12.5" fill="#a05a12">
+							<text x="286" y="166" text-anchor="middle" font-style="italic">λ(w<tspan font-size="9.5" dy="3">it</tspan><tspan dy="-3">)</tspan></text>
+							<text x="300" y="287" text-anchor="middle" font-style="italic">f(·)</text>
+							<text x="152" y="131" text-anchor="end">correlated</text>
+							<text x="28" y="271" text-anchor="middle">moves</text>
+							<text x="28" y="285" text-anchor="middle">over time</text>
+						</g>
+						<g font-size="13" fill="#2f7fab" font-style="italic">
+							<text x="297" y="86" text-anchor="middle">β</text>
+							<text x="492" y="142" text-anchor="middle">α</text>
+						</g>
+						<g font-size="12" fill="#777">
+							<text x="410" y="222">looks like</text>
+							<text x="410" y="236">influence</text>
+						</g>
+					</svg>
+					<figcaption>
+						<span class="jm-swipe">Swipe sideways to see the whole diagram.</span>
+						<span style="color:#a05a12">Orange arrows</span>: what the hidden characteristic does; it drives the choice, shapes the friendships, moves over time and is correlated with pocket money.
+						<span style="color:#2f7fab">Blue arrows</span>: the observed causes the paper estimates. Grey arrow: the friendship-to-smoking arrow that looks like peer influence but need not be.
+					</figcaption>
+				</figure>
+			</div>
+</section>
     </div>
     <script src="javascripts/scale.fix.js"></script>
   </body>
