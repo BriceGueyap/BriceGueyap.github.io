@@ -144,27 +144,22 @@ Networks</a>.
 				-->
 				<br> <button class="accordion"> Abstract </button>
 		<div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
-			This paper develops identification and estimation methods for a semiparametric
-dynamic logit model in which a binary outcome depends on observed covariates, the
-lagged outcome, and an unknown function of a latent social characteristic that also
-governs the formation of social ties. The unobserved characteristic is allowed to vary
-across agents and over time, and the network formation process is left completely
-unspecified. Identification combines three elements: conditional likelihood arguments
-that exploit the logistic structure, network-type matching that eliminates the unknown
-social influence function by comparing agents whose observed linking behavior reveals
-identical latent characteristics, and local temporal smoothing that handles the interaction between dynamics and time-varying unobserved heterogeneity. A kernel-weighted
-conditional maximum likelihood estimator is proposed and shown to be consistent. Its
-limiting distribution is derived in two regimes: when network types and covariates have
-discrete support, exact matches occur with positive probability, the localized score is
-exactly centered, and the estimator is root-n consistent and asymptotically normal; in
-general designs, the estimator is asymptotically normal around a pseudo-true value defined as the maximizer of the localized population criterion, the order of the matching
-bias is characterized in terms of the bandwidths and the temporal drift of the latent
-index, and a generalized jackknife bias correction restores centering at the true parameter, with variance formulas that account for matching on estimated codegree distances.
-Monte Carlo simulations show that the estimator substantially reduces the bias present
-in naive and control-function approaches across a range of network formation models
-and achieves close to nominal coverage at moderate sample sizes. The method is applied to longitudinal data on adolescent smoking and friendship networks from the
-Glasgow Teenage Friends and Lifestyle Study. An extension to ordered outcomes is
-developed using composite conditional maximum likelihood.		</div>
+			This paper studies the identification and estimation of a semiparametric dynamic
+logit model with nonparametric link formation, in which a time-varying unobserved
+characteristic affects outcomes and links. The outcome depends on covariates, the
+past outcome, a fixed effect, and an unknown function of the time-varying unobserved
+characteristic. Conditioning on a switch by the same agent across waves removes the
+fixed effect but not the change in the function. Comparing two agents of the same
+network type, meaning the same probability of linking with each other agent, removes
+the change in the function. The comparison requires the function to change by the
+same amount for both agents over the switch. The pairwise conditional likelihood
+estimator is consistent, including with continuous types, and asymptotically normal
+under finite-type and exact-stability conditions. In finite-sample simulations, bias falls
+with sample size, coverage is near nominal, and fixed-effects and peer-control logits
+stay biased. A second estimator, conditioning on recovered network classes, is more
+precise in the simulations. In the empirical application, I study how past smoking and
+pocket money affect smoking in the Glasgow Teenage Friends and Lifestyle Study and
+document the data requirements.		</div>
 		</p>
 	<p style="margin:0;" }>
 	<p> <a style="margin:0; font-size:100%; font-weight:bold" href="https://ssrn.com/abstract=6463985" target="_blank" rel="noopener noreferrer">
