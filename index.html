@@ -223,7 +223,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 				<figure class="jm-figure">
 					<svg viewBox="0 0 660 340" role="img" font-family="Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif"
-							 aria-label="A hidden characteristic w drives both smoking and friendships; pocket money and past smoking also drive smoking; the dashed friendship-to-smoking arrow is what looks like peer influence.">
+							 aria-label="Time-varying unobserved characteristics w drive both smoking and friendships, move over time and are correlated with pocket money; a fixed effect drives smoking but not friendships; pocket money and past smoking also drive smoking, and past smoking enters the friendship rule; the dashed friendship-to-smoking arrow is what looks like peer influence.">
 						<defs>
 							<marker id="jm-ar-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
 								<path d="M0,0 L10,5 L0,10 z" fill="#3399cc"/>
@@ -243,26 +243,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<rect x="325" y="277" width="150" height="46" rx="7"/>   <!-- friendships -->
 							<rect x="510" y="122" width="130" height="56" rx="7"/>   <!-- past smoking -->
 						</g>
-						<!-- Hidden box -->
-						<rect x="55" y="172" width="210" height="86" rx="7" fill="#fff6ea" stroke="#c9741a" stroke-width="1.8" stroke-dasharray="6 4"/>
+						<!-- Hidden boxes -->
+						<rect x="55" y="172" width="210" height="86" rx="7" fill="#fff6ea" stroke="#c9741a" stroke-width="1.8" stroke-dasharray="6 4"/>   <!-- time-varying characteristics -->
+						<rect x="325" y="37" width="150" height="46" rx="7" fill="#fff6ea" stroke="#c9741a" stroke-width="1.8" stroke-dasharray="6 4"/>   <!-- fixed effect -->
 
 						<!-- Box labels -->
 						<g font-size="14" fill="#222" text-anchor="middle">
 							<text x="160" y="64.5"><tspan font-weight="700">Pocket money</tspan><tspan font-style="italic" dx="6">X</tspan><tspan font-size="10" dy="3.5">it</tspan></text>
+							<text x="400" y="64.5"><tspan font-weight="700">Fixed effect</tspan><tspan font-style="italic" dx="6">μ</tspan><tspan font-size="10" dy="3.5">i</tspan></text>
 							<text x="400" y="154.5"><tspan font-weight="700">Smoking</tspan><tspan font-style="italic" dx="6">y</tspan><tspan font-size="10" dy="3.5">it</tspan></text>
 							<text x="400" y="304.5"><tspan font-weight="700">Friendships</tspan><tspan font-style="italic" dx="6">D</tspan><tspan font-size="10" dy="3.5">t</tspan></text>
 							<text x="575" y="145"><tspan font-weight="700">Past smoking</tspan></text>
 							<text x="575" y="164"><tspan font-style="italic">y</tspan><tspan font-size="10" dy="3.5">i,t−1</tspan></text>
-							<text x="160" y="195"><tspan font-weight="700">Unobserved characteristics</tspan></text>
-							<text x="160" y="214"><tspan font-style="italic">w</tspan><tspan font-size="10" dy="3.5">it</tspan></text>
+							<text x="160" y="195"><tspan font-weight="700">Time-varying unobserved</tspan></text>
+							<text x="160" y="214"><tspan font-weight="700">characteristics</tspan><tspan font-style="italic" dx="6">w</tspan><tspan font-size="10" dy="3.5">it</tspan></text>
 							<text x="160" y="233" font-size="11.5" fill="#a05a12">risk attitude, impulsivity,</text>
 							<text x="160" y="247" font-size="11.5" fill="#a05a12">attachment to norms</text>
+							<text x="400" y="14" font-size="11.5" fill="#a05a12">persistent, not in the link rule</text>
+							<text x="400" y="28" font-size="11.5" fill="#a05a12">(e.g., the smoking environment at home)</text>
 						</g>
 
-						<!-- Effects of the hidden trait (warm) -->
+						<!-- Effects of the unobserved characteristics (warm) -->
 						<g stroke="#c9741a" stroke-width="1.8" fill="none">
 							<line x1="265" y1="198" x2="323" y2="158" marker-end="url(#jm-ar-warm)"/>
 							<line x1="265" y1="234" x2="323" y2="292" marker-end="url(#jm-ar-warm)"/>
+							<!-- fixed effect drives smoking -->
+							<line x1="400" y1="85" x2="400" y2="125" marker-end="url(#jm-ar-warm)"/>
 							<!-- w correlated with X -->
 							<line x1="160" y1="170" x2="160" y2="85" stroke-dasharray="5 4" marker-start="url(#jm-ar-warm)" marker-end="url(#jm-ar-warm)"/>
 							<!-- w moves over time -->
@@ -272,6 +278,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<g stroke="#3399cc" stroke-width="1.8" fill="none">
 							<line x1="245" y1="66" x2="333" y2="125" marker-end="url(#jm-ar-blue)"/>
 							<line x1="508" y1="150" x2="477" y2="150" marker-end="url(#jm-ar-blue)"/>
+							<!-- past smoking also enters the friendship rule -->
+							<path d="M 575 180 C 575 250, 545 300, 478 300" marker-end="url(#jm-ar-blue)"/>
 						</g>
 						<!-- Spurious peer effect (grey, dashed) -->
 						<line x1="400" y1="275" x2="400" y2="176" stroke="#9a9a9a" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#jm-ar-soft)"/>
@@ -288,15 +296,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<text x="297" y="86" text-anchor="middle">β</text>
 							<text x="492" y="142" text-anchor="middle">α</text>
 						</g>
+						<g font-size="12" fill="#2f7fab">
+							<text x="583" y="250">lags enter <tspan font-style="italic">f</tspan></text>
+						</g>
 						<g font-size="12" fill="#777">
 							<text x="410" y="222">looks like</text>
 							<text x="410" y="236">influence</text>
+							<text x="410" y="250">(not in the model)</text>
 						</g>
 					</svg>
 					<figcaption>
 						<span class="jm-swipe">Swipe sideways to see the whole diagram.</span>
-						<span style="color:#a05a12">Orange arrows</span>: what the unobserved characteristic does; it drives the choice, shapes the friendships, moves over time and is correlated with pocket money.
-						<span style="color:#2f7fab">Blue arrows</span>: the observed causes the paper estimates. Grey arrow: the friendship-to-smoking arrow that looks like peer influence but need not be.
+						<span style="color:#a05a12">Orange arrows</span>: what the unobserved characteristics do. The time-varying ones drive the choice, shape the friendships, move over time, and are correlated with pocket money; the fixed effect is persistent, plays no role in the friendships, and drives the choice as well.
+						<span style="color:#2f7fab">Blue arrows</span>: the observed causes the paper estimates, pocket money and past smoking; past smoking also enters the friendship rule. Grey arrow: the friendship-to-smoking arrow that looks like peer influence but need not be; the model contains no peer effect.
 					</figcaption>
 				</figure>
 			</div>
